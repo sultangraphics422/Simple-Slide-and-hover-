@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+* {
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: 'Roboto' Sans-Serf;
+}
+body{
+    display:inline-flexbox;
+    justify-content:centre;
+    align-items:center;
+    min-height:100vh;
+    background: hsl(233, 19%, 92%);
+}
+.container{
+    display:flex;
+    justify-content:centre;
+    align-items:center;
+    max-width:1200px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+.container .card{
+    position:relative;
+    width:440px;
+    height:440px;        
+    border-radius:15px;
+    margin:30px;
+}
+.container .card .box{
+    position:absolute;
+    top:20px;
+    left:20px;
+    right:20px;
+    bottom:20px;
+    background: hsl(233, 19%, 92%);
+    box-shadow:0 10px 20px rgba(0,0,0,0.5);
+    border-radius:15px;
+    display:flex;
+    justify-content: center;
+    align-items:center;
+    transition: 0.5s;
+}
+.container .card:hover .box{
+    transform: translateY(-50px);
+    box-shadow:0 10px 40px rgba(0,0,0,0.2);
+    background: #35518d;
+}
+.container .card .box .content{
+    padding:20px;
+    text-align:center;
+}
+
+.container .card:hover .box .content h3{
+    
+    font-size:1.3em;
+    color: hsl(206, 41%, 15%);
+    padding: 15px;
+    z-index:1;
+    transition:0.5s;
+}
+.container .card .box .content p{
+    font-size:1em;
+    font-weight:300;
+    color:#172836;
+    z-index:3;
+    transition:0.5s;
+}
+.container .card:hover .box .content h3,
+.container .card:hover .box .content p
+{
+    color: hsl(233, 19%, 92%);
+}
+
+.container .card .box .content a{
+    position:relative;
+    display:inline-block;
+    padding:8px 20px;
+    background:hsl(0, 0%, 100%);
+    margin-top:15px;
+    border-radius:20px;
+    color:#35518d;
+    text-decoration:none;
+    font-weight:400;
+    box-shadow:0 10px 20px rgba(0,0,0,0.2);
+}
